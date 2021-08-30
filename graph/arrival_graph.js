@@ -2,7 +2,7 @@ var pivot9 = new WebDataRocks({
     container: "#pivot9",
     toolbar: false, //les boutons du bandeau de base sont masqués et remplacés par le bouton custom d'appel d'un csv local
     height: 200,
-    width: 840,
+    width: 820,
     report: {
 			"dataSource": {
           "dataSourceType": "csv",
