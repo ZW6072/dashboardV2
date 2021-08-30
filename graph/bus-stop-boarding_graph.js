@@ -102,7 +102,7 @@ function drawChart11(rawData) {
         plugins: {
           responsive: true,
           legend: {
-              display: true,
+              display: false,
               position: 'bottom',
           },
           title: {
