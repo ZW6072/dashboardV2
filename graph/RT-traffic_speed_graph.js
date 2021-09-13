@@ -1,41 +1,19 @@
-var pivot2 = new WebDataRocks({
-    container: "#pivot2",
+var pivot15 = new WebDataRocks({
+    container: "#pivot15",
     toolbar: false, //les boutons du bandeau de base sont masqués et remplacés par le bouton custom d'appel d'un csv local
     height: 580,
     width: 900,
     report: {
 			"dataSource": {
           "dataSourceType": "csv",
-					"filename": "https://zw6072.github.io/depot_data/MISECT.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
+					"filename": "https://zw6072.github.io/depot_data/etat-du-trafic-en-temps-reel.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
       },
 			"slice": {
-				"reportFilters": [{
-                "uniqueName": "sid" //filtre tout le rapport avec le champs "sid"
-            },
-            {
-                "uniqueName": "sid",
-                "filter": {
-                    "members": [
-                        "sid.0"  //filtre le rapport avec "sid" = "0"
-                    ]
-                }
-            }
+				"reportFilters": [
         ],
-        "sorting": {
-            "column": {
-                "type": "asc",
-                "tuple": [],
-                "measure": "flow"
-              },
-        },
 				"rows": [
             {
-						"uniqueName": "oid", //champs "ent" en ligne
-            "filter": {
-                "type": "top",
-                "quantity": 300,
-                "measure": "flow"
-              },
+						"uniqueName": "denomination",
 						},
 				],
 				"columns": [
@@ -44,24 +22,24 @@ var pivot2 = new WebDataRocks({
 				],
 				"measures": [
 		 				{
-						"uniqueName": "flow",
-						"aggregation": "sum",
+						"uniqueName": "averageVehicleSpeed",
+						"aggregation": "average",
 						"format": "currency"
 		 				}
 	 			]
 			}
 		},
     reportcomplete: function() {
-      pivot2.off("reportcomplete");
-      createChart2(); //quand le pivot est créé, le chart peut être créé
+      pivot15.off("reportcomplete");
+      createChart15(); //quand le pivot est créé, le chart peut être créé
     }
 });
 
-function createChart2() {
-    pivot2.getData({}, drawChart2, updateChart2);
+function createChart15() {
+    pivot15.getData({}, drawChart15, updateChart15);
 }
 
-function prepareDataFunction2(rawData) {
+function prepareDataFunction15(rawData) {
     var result = {};
     var labels = [];
     var data = [];
@@ -81,8 +59,8 @@ function prepareDataFunction2(rawData) {
     return result;
 }
 
-function drawChart2(rawData) {
-    var data = prepareDataFunction2(rawData);
+function drawChart15(rawData) {
+    var data = prepareDataFunction15(rawData);
     var data_for_charts = {
         datasets: [{
             data: data.data,
@@ -111,9 +89,9 @@ function drawChart2(rawData) {
               position: 'right',
           },
           title: {
-              display: false,
+              display: true,
               fontSize: 18,
-              text: 'Profit by Countries'
+              text: 'Average speed by street'
           },
           scale: {
               ticks: {
@@ -128,29 +106,15 @@ function drawChart2(rawData) {
       },
     };
 
-    var chartColors = { //color shortcut, useful for the function colorChangeValue
-      red: 'rgb(255, 99, 132, 0.8)',
-      blue: 'rgb(54, 162, 235, 0.8)'
-    };
-
-    var ctx = document.getElementById("chartcontainer2").getContext("2d");
+    var ctx = document.getElementById("chartcontainer15").getContext("2d");
     var chart = new Chart(ctx, {
         data: data_for_charts,
         type: 'bar',
         options: options
     });
-
-    var colorChangeValue = 14; //set this to whatever is the deciding color change value
-    var dataset = chart.data.datasets[0];
-    for (var i = 0; i < dataset.data.length; i++) {
-      if (dataset.data[i] > colorChangeValue) {
-        dataset.backgroundColor[i] = chartColors.red;
-      }
-    };
-    chart.update();
 }
 
-function updateChart2(rawData) {
-    chart.destroy2();
-    drawChart2(rawData);
+function updateChart15(rawData) {
+    chart.destroy15();
+    drawChart15(rawData);
 }
