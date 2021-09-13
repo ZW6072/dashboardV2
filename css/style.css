@@ -46,6 +46,30 @@
 *::after {
   box-sizing: border-box; }
 
+  .container {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .responsive {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  .half-responsive {
+    position: relative;
+    width: 80%;
+    min-width: 160px;
+    margin: 0 auto;
+  }
+
+  .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -179,7 +203,8 @@ svg {
 
 table {
   border-collapse: collapse;
-  vertical-align: middle;  }
+  vertical-align: middle;
+ }
 
 caption {
   padding-top: 1rem;
@@ -1693,8 +1718,8 @@ pre {
     .table-responsive-xl > .table-bordered {
       border: 0; } }
 .table-responsive {
-  display: block;
   width: 100%;
+  align: center;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; }
   .table-responsive > .table-bordered {

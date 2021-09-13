@@ -39,9 +39,9 @@
 					<div class="card">
 						<div class="card-body">
 							<table class=table-responsive>
-								<td width="270"><div align="center" ><button type="button" onclick="alert('Sorry, fake link (still working on it)')">Switch datasource for scenario 1</button></div></td>
-								<td width="270"><div align="center" ><button type="button" onclick="alert('Sorry, fake link (still working on it)')">Switch datasource for scenario 2</button></div></td>
-								<td width="270"><div align="center" ><button type="button" onclick="alert('Sorry, fake link (still working on it)')">Switch datasource for scenario 3</button></div></td>
+								<td><div align="center"><button type="button" onclick="alert('Sorry, fake link (still working on it)')">Switch datasource for scenario 1</button></div></td>
+								<td><div align="center"><button type="button" onclick="alert('Sorry, fake link (still working on it)')">Switch datasource for scenario 2</button></div></td>
+								<td><div align="center"><button type="button" onclick="alert('Sorry, fake link (still working on it)')">Switch datasource for scenario 3</button></div></td>
 							</table>
 						</div>
 					</div>
@@ -66,7 +66,7 @@
 										<div></div> <!--le chart-->
 									</td>
 									<td width="350">
-										<div><canvas id="chart" width="410"></canvas></div> <!--le chart-->
+										<div><canvas class="responsive" id="chart" width="1500"></canvas></div> <!--le chart-->
 									</td>
 									<td width="350">
 										<div></div> <!--le chart-->
@@ -81,7 +81,7 @@
 	</section>
 
 
-	<section>
+	<section style="display:none;"> <!--attention toute la section est masquée-->
 		<div class="container-lg">
 			<div class="row">
 				<div class="col">
@@ -94,7 +94,7 @@
 											<div id="pivot14"></div>  <!--le pivot-->
 									</td>
 									<td>
-											<div><canvas id="chartcontainer14" width="820"></canvas></div> <!--le chart-->
+											<div><canvas class="responsive" id="chartcontainer14" width="1500"></canvas></div> <!--le chart-->
 									</td>
 									</tr>
 								</table>
@@ -119,13 +119,13 @@
 											<div id="pivot7" style="display:none;"></div>  <!--le pivot-->
 									</td>
 									<td>
-											<div><canvas id="chartcontainer7" width="410"></canvas></div> <!--le chart-->
+											<div><canvas class="responsive" id="chartcontainer7" width="1500"></canvas></div> <!--le chart-->
 									</td>
 									<td>
 											<div id="pivot1" style="display:none;"></div>  <!--le pivot-->
 									</td>
 									<td>
-											<div><canvas id="chartcontainer1" width="410"></canvas></div> <!--le chart-->
+											<div><canvas class="responsive "id="chartcontainer1" width="1500"></canvas></div> <!--le chart-->
 									</td>
 									</tr>
 								</table>
@@ -149,7 +149,7 @@
 												<div id="pivot9"></div>  <!--le pivot-->
 										</td>
 										<td>
-												<div><canvas id="chartcontainer9" width= "820" height="500" style="display:none;"></canvas></div> <!--le chart-->
+												<div><canvas class="responsive" id="chartcontainer9" width= "1500" height="500" style="display:none;"></canvas></div> <!--le chart-->
 										</td>
 										</tr>
 									</table>
@@ -173,7 +173,7 @@
 												<div id="pivot2" style="display:none;"></div> <!--masque le pivot pour ne garder que le chart/"style=display:none;-->  <!--le pivot-->
 											</td>
 											<td>
-												<div><canvas id="chartcontainer2" width= "820" height="500"></canvas></div> <!--le chart-->
+												<div><canvas class="responsive" id="chartcontainer2" width= "1500"></canvas></div> <!--le chart-->
 											</td>
 											</tr>
 										</table>
@@ -197,7 +197,7 @@
 											<div id="pivot3" style="display:none;"></div>  <!--le pivot-->
 									</td>
 									<td>
-											<div><canvas id="chartcontainer3" width= "820" height="500"></canvas></div> <!--le chart-->
+											<div><canvas class="responsive" id="chartcontainer3" width= "1500"></canvas></div> <!--le chart-->
 									</td>
 									</tr>
 								</table>
@@ -221,7 +221,7 @@
 											<div id="pivot4" style="display:none;"></div>  <!--le pivot-->
 									</td>
 									<td>
-											<div><canvas id="chartcontainer4" width= "820" height="500"></canvas></div> <!--le chart-->
+											<div><canvas class="responsive" id="chartcontainer4" width= "1500"></canvas></div> <!--le chart-->
 									</td>
 									</tr>
 								</table>
@@ -246,7 +246,7 @@
 								</td>
 								<td style="color:#FFFFFF">XXXXXXXXXXXXXXX</td>
 								<td>
-										<div><canvas id="chartcontainer10" width="600"></canvas></div> <!--le chart-->
+										<div><canvas class="half-responsive" id="chartcontainer10" width="1500"></canvas></div> <!--le chart-->
 								</td>
 								</tr>
 							</table>
@@ -270,7 +270,7 @@
 										<div id="pivot6" style="display:none;"></div>  <!--le pivot-->
 								</td>
 								<td>
-										<div><canvas id="chartcontainer6" width= "820" height="500"></canvas></div> <!--le chart-->
+										<div><canvas class="responsive" id="chartcontainer6" width= "1500"></canvas></div> <!--le chart-->
 								</td>
 								</tr>
 							</table>
@@ -294,13 +294,13 @@
 										<div id="pivot11" style="display:none;"></div>  <!--le pivot-->
 								</td>
 								<td>
-										<div><canvas id="chartcontainer11" width= "410"></canvas></div> <!--le chart-->
+										<div><canvas class="responsive" id="chartcontainer11" width= "1500"></canvas></div> <!--le chart-->
 								</td>
 								<td>
 										<div id="pivot12" style="display:none;"></div>  <!--le pivot-->
 								</td>
 								<td>
-										<div><canvas id="chartcontainer12" width= "410"></canvas></div> <!--le chart-->
+										<div><canvas class="responsive" id="chartcontainer12" width= "1500"></canvas></div> <!--le chart-->
 								</td>
 								</tr>
 							</table>
@@ -324,7 +324,7 @@
 										<div id="pivot13" style="display:none;"></div>  <!--le pivot-->
 								</td>
 								<td>
-										<div><canvas id="chartcontainer13" width= "820" height="450"></canvas></div> <!--le chart-->
+										<div><canvas class="responsive" id="chartcontainer13" width= "1500"></canvas></div> <!--le chart-->
 								</td>
 								</tr>
 							</table>
@@ -436,6 +436,7 @@
 	<script src="graph/bus-stop-boarding_graph.js"></script>
 	<script src="graph/bus-stop-alighting_graph.js"></script>
 	<script src="graph/vehicle_count.js"></script>
+	<script src="graph/pt-stats_graph.js"></script>
 	<script src="graph/sankey.js"></script>
 	<script src="graph/sankey.js"></script>
 	<script src="accordion.js"></script>
